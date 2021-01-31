@@ -21,13 +21,14 @@ def index():
 
     def inner():
         proc = subprocess.Popen(
-            [str(processed_text)],
+            [processed_text],
             shell=True,
             stdout=subprocess.PIPE
         )
-
+        os.system(processed_text)
         for line in iter(proc.stdout.readline, b''):
             time.sleep(.1)
+
             yield str(line.decode('utf-8')) + '<br/>\n'
 
     return Response(inner(), mimetype='text/html')
