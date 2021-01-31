@@ -1,0 +1,36 @@
+<html>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Montserrat;
+        background: #313E50;
+    }
+</style>
+<title>PC Manager</title>
+
+<body>
+    <div class="text-input">
+        <form method="POST">
+            <input name="text" type="text" id="input1">
+            <input type="submit" value="Submit Command">
+            
+            
+        </form>
+    </div>
+    <button onclick="window.location.href='/shutdown'">Shutdown</button>
+     -
+    <button onclick="window.location.href='/cshut'">Cancel Shutdown</button>
+     -
+     <button onclick="window.location.href='/logout'">Logout</button>
+     -
+    <button onclick="window.open('https://github.com/dev-nolant','_blank')">Suppot Creator</button>
+    <button onclick="window.open('https://nolant.org','_blank')">
+</body>
+
+</html>
