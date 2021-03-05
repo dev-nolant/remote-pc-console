@@ -29,7 +29,7 @@ def index():
         for line in iter(proc.stdout.readline, b''):
             time.sleep(.1)
 
-            yield str(line.decode('utf-8')) + '<br/>\n'
+            return str(line.decode('utf-8')) + '<br/>\n'
 
     return Response(inner(), mimetype='text/html')
 
